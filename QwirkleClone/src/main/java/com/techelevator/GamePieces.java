@@ -27,33 +27,35 @@ public class GamePieces {
 		this.gamePieces = gamePieces;
 		Collections.shuffle(gamePieces);
 	}
-	
+
 	public void startingDeal() {
 
 		for (int i = 0; i < 6; i++) {
 			player1Hand.add(gamePieces.pop());
 			player2Hand.add(gamePieces.pop());
 		}
-		System.out.println(player1Hand);
-		System.out.println(player2Hand);
-	}
 
+	}
 
 	public Stack<String> getGamePieces() {
 		return gamePieces;
 	}
 
-
 	public ArrayList<String> getPlayer1Hand() {
 		return player1Hand;
 	}
 
-
 	public ArrayList<String> getPlayer2Hand() {
 		return player2Hand;
 	}
-	
-	
-	
+
+	public String toString(ArrayList<String> hand) {
+		String alter = "\nPlayer Hand:\n";
+
+		for (int i = 0; i < hand.size(); i++) {
+			alter += hand.get(i) + "\n";
+		}
+		return alter;
+	}
 
 }
