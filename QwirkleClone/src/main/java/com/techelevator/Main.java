@@ -3,7 +3,8 @@ package com.techelevator;
 public class Main {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		GamePieces game = new GamePieces();
+		game.startingDeal();
 
 	}
 
